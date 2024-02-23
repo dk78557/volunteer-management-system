@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE PROJECT</title>
+    <style>
+        body {
+            margin: 0px;
+            border: 0px;
+            font-family: Arial, sans-serif;
+            transition: margin-left 0.5s;
+            background-color: lightgray;
+        }
+
+        #sidebar {
+            height: 100vh;
+            width: 0;
+            background-color: #333;
+            position: fixed;
+            left: 0;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+            color: #fff;
+            text-align: center;
+            transition: width 0.5s;
+        }
+
+        #content {
+            margin-left: 0;
+            padding: 0px;
+            height: 200px;
+            transition: margin-left 0.5s;
+            text-align: center;
+            text-shadow: 0px 0px 3px black; 
+            color: lightgoldenrodyellow;
+            background-image: url(banner\ image.jpg);
+
+        }
+
+        .sidebar-item {
+            margin-bottom: 20px;
+        }
+
+        #openBtn {
+            display: inline-block;
+            font-size: 20px;
+            width: 20px;
+            text-align: center;
+            cursor: pointer;
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            z-index: 1;
+            text-shadow: 0px 0px 2px black;
+            
+        }
+        #top-bar {
+            background-color: #333;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px;
+            color: white;
+        }
+        #icons-container {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
+        }
+
+        .icon {
+            margin-right: 0px;
+            margin-left: 35px;
+            padding: 10px;
+            
+        }
+        #dashboard-info {
+            background-color: #000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            color: white;
+            text-align: left;
+        }
+
+        #dashboard-title {
+            padding: 10px;
+            background-color: #1b73bb;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 0px;
+            font-size: 18px;
+            text-align: center;
+        }
+        #dashboard-title h1:hover{
+            color:orange;
+            transition: 300ms linear;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content:space-evenly;
+            background-color: none;
+        }
+
+        .box {
+            background-color: lightgreen;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align:center;
+                
+        }
+        .box h2{
+            color: black;
+        } 
+        #table-container {
+            margin: 10px;
+            background-color: lightslategray;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            font-family: cursive;
+        }
+        #table-container h1{
+            text-align: center;
+            font-family: cursive;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .box h2:hover{
+            color: white;
+            transition: 300ms linear;
+        }
+        .sidebar-item a:link{
+            color: royalblue;
+            text-decoration: none;
+        }
+        .sidebar-item a:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+        .sidebar-item a{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div id = "topbar">
+    <div id="icons-container">
+        <div class="icon">
+            <img src="search.png" alt="Search Icon" width="30" height="30">
+        </div>
+        <div class="icon">
+            <img src="icons8-mail-48.png" alt="Mail Icon" width="30" height="30">
+        </div>
+        <div class="icon">
+            <img src="icons8-bell-48.png" alt="Bell Icon" width="30" height="30">
+        </div>
+        <div class="icon">
+            <a href="web login.html"><img src="icons8-log-out-48.png" alt="Logout Icon" width="30" height="30"></a>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div class="sidebar-item"><a href="web dashboard.html">Dashboard</a></div>
+        <div class="sidebar-item"><a href="web volunteer.html">Volunteers</a></div>
+        <div class="sidebar-item"><a href="mailto:rounakkumar905@gmail.com">Any Queries?</a></div>
+    </div>
+
+    <div id="content">
+    </div>
+    <div class="maincontent">
+        
+    </div>
+
+    <div id="openBtn" onclick="openNav()">☰</div>
+</div>
+<div id="dashboard-info">
+    
+    <div>Home / Dashboard</div>
+</div>
+<div id="dashboard-title">
+    <h1>Dashboard</h1>
+</div>
+<div class="box-container">
+    <div class="box">
+        <h2>Volunteer Added This Month</h2><hr>
+        <p><strong> 23 VOLUNTEERS </strong></p>
+    </div>
+    <div class="box">
+        <h2> Page Viewers </h2><hr>
+        <p><strong>56 Viewers</strong> </p>
+    </div>
+    <div class="box">
+        <h2>Events This Month</h2><hr>
+        <p><strong>10 Events</strong></p>
+    </div>
+    <div class="box">
+        <h2>Total Applications</h2><hr>
+        <p><strong>5 Applications</strong> </p>
+    </div>
+</div>
+
+<div id="table-container">
+    <table>
+        <h1>WORK ASSIGNED</h1>
+        <thead>
+            <tr>
+                <th>Volunteer ID</th>
+                <th>Volunteer Name</th>
+                <th>Work Assigned</th>
+                <th>Status of Work</th>
+                <th>Contact Numbers</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1122</td>
+                <td>RIYA</td>
+                <td>AWRENESS IN DELHI</td>
+                <td>DONE</td>
+                <td>9898957567</td>
+            </tr>
+            <tr>
+                <td>1111</td>
+                <td>RAJ</td>
+                <td>DEHRADUN SCHOOL MAINTANANCE</td>
+                <td>IN PROGRESS</td>
+                <td>9898957534</td>
+            </tr>
+            <tr>
+                <td>1122</td>
+                <td>RAJ </td>
+                <td>DELHI SCHOOL</td>
+                <td>NOT DONE</td>
+                <td>9898874567</td>
+            </tr>
+            <tr>
+                <td>3854</td>
+                <td>HARPREET</td>
+                <td>PUNJAB SCHOOL</td>
+                <td>DONE</td>
+                <td>9484633467</td>
+            </tr>
+            <tr>
+                <td>0676</td>
+                <td>VIRAT</td>
+                <td>JAMMU SCHOOL</td>
+                <td>DONE</td>
+                <td>9673545674</td>
+            </tr>
+            <tr>
+                <td>9611</td>
+                <td>VIKAS</td>
+                <td>BIHAR SCHOOL</td>
+                <td>IN PROGRESS</td>
+                <td>9898495633</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+    <script>
+        function openNav() {
+            var sidebar = document.getElementById("sidebar");
+            var content = document.getElementById("content");
+
+            if (sidebar.style.width === "200px") {
+                sidebar.style.width = "0";
+                content.style.marginLeft = "0";
+            } else {
+                sidebar.style.width = "200px";
+                content.style.marginLeft = "200px";
+            }
+        }
+    </script>
+
+</body>
+</html>

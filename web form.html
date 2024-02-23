@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Registration</title>
+    <style>
+         .form{
+            
+            margin-left: 450px;
+            width: 400px;
+            padding: 10px;
+            border: 8px solid ;
+            border-radius: 10px;
+            border-style:groove;
+            box-shadow: 10px 100px 100px white;
+            border-color: black;
+            align-content: center;
+            
+         }
+         h2{
+            text-align: center;
+         }
+         body{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            background-image: url(FORM.jpg);
+            background-size: cover;
+            text-shadow: 0px 0px 2px white;
+         }
+         .bb{
+            text-align: center;
+         }
+    </style>
+</head>
+<body>
+    <h2>VOLUNTEER REGISTRATION</h2>
+    <form class="form">
+        <fieldset>
+        <label>
+            1. NAME : <input type="text" required/>
+        </label></fieldset><br><br>
+        <fieldset><label>
+            2. MOBILE NUMBER : <input type="text" required/>
+        </label></fieldset><br><br>
+            <fieldset>
+        <label>
+            3. E-MAIL : <input type="email" required/>
+        </label></fieldset><br><br>
+            <fieldset>
+        <label>
+            4. PASSWORD : <input type="password" required/>
+        </label></fieldset><br>
+        <fieldset>
+        <P>5. ARE YOU INDIAN? </P>
+        <input type="radio" id="html" name="INDIAN" value="YES">
+        <label for="html">YES</label>
+        <input type="radio" id="css" name="INDIAN" value="NO">
+        <label for="css">NO</label><br>
+        <P>6. PROVIDE YOUR ADDRESS : </P>
+        <textarea>ADDRESS</textarea><BR><br>
+        <label for="freetime">7. COMFORTABLE TIME SLOT :</label>
+        <select id="freetime" name="freetime">
+            <option value="time1">8AM  T0 11AM</option>
+            <option value="time2">2PM TO 5PM</option>
+            <option value="time3">7PM TO 10PM</option>
+        </select><BR><BR>
+            <p>8. HELP WHICH CAN BE PROVIDED BY YOU : </p>
+            <input type="checkbox" name="LANGUAGE" value="FOOD SUPPLIES"/>FOOD SUPPLIES &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+            <input type="checkbox" name="LANGUAGE" value="CLOTHING"/>CLOTHING &nbsp;<br>
+            <input type="checkbox" name="LANGUAGE" value="MEDICAL HELP"/>MEDICAL HELP &nbsp;<BR>
+            <input type="checkbox" name="LANGUAGE" value="EDUCATIONAL HELP"/>EDUCATIONAL HELP &nbsp;<BR>
+            <input type="checkbox" name="LANGUAGE" value="CLEANLINESS HELP"/>CLEANLINESS HELP &nbsp;<BR>
+            <input type="checkbox" name="LANGUAGE" value="FINANCIAL HELP"/>FINANCIAL HELP &nbsp;<BR>
+            <div class="bb"><input type="submit" value="Submit"></div>
+    </form>
+</body>
+</html>
